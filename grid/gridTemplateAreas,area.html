@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid-template-area | grid-area</title>
+  <style>
+             * {
+      box-shadow: border-box;
+    }
+    body {
+      margin: 0;
+    }
+    ul {
+      padding: 0;
+      list-style-type: none;
+      border: 5px solid teal;
+    }
+    li{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: beige;
+      border: 3px solid tomato;
+      border-radius: 5px;
+    }
+    .container {
+      display: grid;
+      height: 500px;
+      gap: 10px;
+
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-areas: 
+      "aaa aaa aaa aaa aaa"
+      "bb  bb  bb  bb  bb"
+      "c   c   c   c   c"
+      "d   e   f   g   h"
+      "i   i   i   i   i";
+
+
+    }
+
+    li:nth-child(1){grid-area: aaa;}
+    li:nth-child(2){grid-area: bb;}
+    li:nth-child(3){grid-area: c;}
+    li:nth-child(4){grid-area: d;}
+    li:nth-child(5){grid-area: e;}
+    li:nth-child(6){grid-area: f;}
+    li:nth-child(7){grid-area: g;}
+    li:nth-child(8){grid-area: h;}
+    li:nth-child(9){grid-area: i;}
+
+
+  </style>
+</head>
+<body>
+  <ul class="container">
+    <li class="item">1</li>
+    <li class="item">2</li>
+    <li class="item">3</li>
+    <li class="item">4</li>
+    <li class="item">5</li>
+    <li class="item">6</li>
+    <li class="item">7</li>
+    <li class="item">8</li>
+    <li class="item">9</li>
+  </ul>
+</body>
+</html>

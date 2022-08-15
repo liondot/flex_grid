@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>align-items | align-self | justify-content | justify-self</title>
+  <style>
+    * {
+      box-shadow: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+      border: 5px solid teal;
+    }
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: beige;
+      border: 3px solid tomato;
+      border-radius: 5px;
+    }
+
+    .container {
+      display: grid;
+      height: 500px;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 10px;
+
+      align-items: stretch;
+    }
+
+    li:nth-child(1){}
+    li:nth-child(2){}
+    li:nth-child(3){}
+    li:nth-child(4){}
+    li:nth-child(5){align-self: start;}
+    li:nth-child(6){}
+    li:nth-child(7){}
+    li:nth-child(8){align-self: end;}
+    li:nth-child(9){}
+    li:nth-child(10){}
+
+
+
+  </style>
+</head>
+
+<body>
+  <ul class="container">
+    <li class="item">1</li>
+    <li class="item">2</li>
+    <li class="item">3</li>
+    <li class="item">4</li>
+    <li class="item">5</li>
+    <li class="item">6</li>
+    <li class="item">7</li>
+    <li class="item">8</li>
+    <li class="item">9</li>
+    <li class="item">10</li>
+  </ul>
+</body>
+
+</html>

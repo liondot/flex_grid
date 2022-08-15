@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>order</title>
+  <style>
+             * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      height: 200px;
+      border: 2px solid red;
+    }
+
+    li {
+      background-color: beige;
+    }
+
+    li:nth-child(2n) {
+      background-color :coral;
+    }
+
+    li:nth-child(1) {
+      flex-grow: 1;
+    }
+    li:nth-child(2) {
+      flex-grow: 2;
+    }
+
+    li:nth-child(3) {
+      flex-shrink: 2;
+    }
+    li:nth-child(4) {
+      flex-shrink: 3;
+    }
+    li:nth-child(5) {
+      flex-basis: 100px;
+      flex-shrink: 2;
+    }
+    li:nth-child(6) {
+      flex-basis: 200px;
+      flex-shrink: 3;
+    }
+    li:last-child {
+      /* flex: flex-grow | flex-shrink | flex-basis  */
+      flex: 1 1 200px;
+    }
+
+    li:nth-child(1){order: 7;}
+    li:nth-child(2){order: 6;}
+    li:nth-child(3){order: 4;}
+    li:nth-child(4){order: 5;}
+    li:nth-child(5){order: 3;}
+    li:nth-child(6){order: 2;}
+    li:nth-child(7){order: 1;}
+  </style>
+</head>
+<body>
+  <ul>
+    <li>첫번째</li>
+    <li>두번째</li>
+    <li>세번째</li>
+    <li>네번째</li>
+    <li>다섯번째</li>
+    <li>여섯번째</li>
+    <li>일곱번째</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-grow & flex-shrink</title>
+  <style>
+       * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      height: 200px;
+      border: 2px solid red;
+    }
+
+    li {
+      background-color: beige;
+    }
+
+    li:nth-child(2n) {
+      background-color :coral;
+    }
+
+    li:nth-child(2) {
+      flex-grow: 1;
+    }
+    li:nth-child(3) {
+      flex-grow: 2;
+    }
+
+    li:nth-child(4) {
+      flex-shrink: 2;
+    }
+    li:nth-child(5) {
+      flex-shrink: 3;
+    }
+
+  </style>
+</head>
+<body>
+  <ul>
+    <li>거북이</li>
+    <li>호랑이</li>
+    <li>기린</li>
+    <li>다람쥐</li>
+    <li>고라니</li>
+  </ul>
+</body>
+</html>
